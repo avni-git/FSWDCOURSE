@@ -2,116 +2,176 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* Header Section */
-.header {
-    height: 100vh;
-    background: linear-gradient(120deg, #1e3c72, #2a5298);
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
     color: white;
-    text-align: center;
-    padding-top: 150px;
+    font-size: 26px;
+    font-weight: bold;
 }
 
-.header h1 {
-    font-size: 42px;
+.logo span {
+    color: #00eaff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 25px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #00eaff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
     margin-bottom: 15px;
 }
 
-.header p {
+.hero-content span {
+    color: #00eaff;
+}
+
+.hero-content p {
     font-size: 20px;
     margin-bottom: 30px;
 }
 
-.btn {
+.hero-btn {
+    padding: 14px 35px;
+    background: #00eaff;
+    color: black;
     text-decoration: none;
-    background: white;
-    color: #1e3c72;
-    padding: 12px 25px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: bold;
 }
 
-.btn:hover {
-    background: #ffd700;
-}
-
-/* About Section */
-.about {
-    padding: 60px 20px;
+/* TRACKS */
+.tracks {
+    padding: 100px 20px;
     text-align: center;
-    background: #f4f4f4;
+    background: #f5f7fa;
 }
 
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.tracks h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
 }
 
-.about p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-}
-
-/* Course Section */
-.course {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.course h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-.card-container {
+.track-cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.card {
-    background: #ffffff;
-    width: 250px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.track-card {
+    width: 280px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s;
 }
 
-.card h3 {
+.track-card:hover {
+    transform: translateY(-10px);
+}
+
+.track-card h3 {
+    color: #004e92;
     margin-bottom: 10px;
-    color: #572538;
 }
 
-/* Why Section */
-.why {
-    padding: 60px 20px;
-    background: #1e3c72;
-    color: rgb(247, 238, 238);
+/* FEATURES */
+.features {
+    padding: 100px 20px;
+    background: #000428;
+    color: white;
     text-align: center;
 }
 
-.why h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
 }
 
-.why ul {
-    list-style: none;
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.feature-box {
+    padding: 25px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
     font-size: 18px;
 }
 
-.why li {
-    margin: 10px 0;
+/* CTA */
+.cta {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #004e92, #000428);
+    color: white;
 }
 
-/* Footer */
+.cta-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 40px;
+    background: #00eaff;
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
 .footer {
-    background: #111;
-    color: rgb(11, 29, 89);
+    padding: 20px;
     text-align: center;
-    padding: 15px;
+    background: black;
+    color: white;
+}
+ing: 15px;
 }
