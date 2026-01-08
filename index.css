@@ -2,176 +2,125 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.7);
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-
-.logo {
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: #00eaff;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-}
-
-.navbar ul li {
-    margin-left: 25px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: #00eaff;
+    font-family: "Segoe UI", sans-serif;
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(135deg, #000428, #004e92);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(rgba(20,60,90,0.9), rgba(20,60,90,0.9)),
+                url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+    background-size: cover;
+    background-position: center;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.program {
+    letter-spacing: 2px;
+    font-size: 12px;
+    opacity: 0.8;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
+    font-size: 42px;
+    margin: 15px 0;
 }
 
-.hero-content span {
-    color: #00eaff;
-}
-
-.hero-content p {
-    font-size: 20px;
+.description {
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 30px;
+    opacity: 0.9;
 }
 
-.hero-btn {
-    padding: 14px 35px;
-    background: #00eaff;
-    color: black;
+/* BUTTONS */
+.buttons {
+    margin-bottom: 35px;
+}
+
+.btn {
+    padding: 12px 28px;
+    margin: 10px;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 25px;
     font-weight: bold;
 }
 
-/* TRACKS */
-.tracks {
-    padding: 100px 20px;
-    text-align: center;
-    background: #f5f7fa;
+.btn.outline {
+    border: 2px solid white;
+    color: white;
 }
 
-.tracks h2 {
-    font-size: 36px;
-    margin-bottom: 50px;
+.btn.solid {
+    background: #00b3b3;
+    color: white;
 }
 
-.track-cards {
+/* TIMER */
+.timer {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
-.track-card {
-    width: 280px;
-    padding: 30px;
-    border-radius: 15px;
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.4s;
+.timer div h2 {
+    font-size: 28px;
 }
 
-.track-card:hover {
-    transform: translateY(-10px);
+.timer div span {
+    font-size: 12px;
+    opacity: 0.8;
 }
 
-.track-card h3 {
-    color: #004e92;
+/* INFO SECTION */
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-box h3 {
+    font-size: 14px;
+    color: #777;
     margin-bottom: 10px;
 }
 
-/* FEATURES */
-.features {
-    padding: 100px 20px;
-    background: #000428;
-    color: white;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.feature-box {
-    padding: 25px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.1);
-    font-size: 18px;
-}
-
-/* CTA */
-.cta {
-    padding: 100px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #004e92, #000428);
-    color: white;
-}
-
-.cta-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 40px;
-    background: #00eaff;
-    color: black;
-    border-radius: 30px;
-    text-decoration: none;
+.info-box p {
+    font-size: 20px;
     font-weight: bold;
+    color: #222;
 }
 
-/* FOOTER */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: black;
-    color: white;
-}
-ing: 15px;
+.info-box span {
+    font-size: 13px;
+    color: #777;
 }
